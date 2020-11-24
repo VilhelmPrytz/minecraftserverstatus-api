@@ -14,9 +14,9 @@ Once you have pip3 and python 3, install required dependencies (packages) using 
 pip3 install -r requirements.txt
 ```
 
-We recommend to host the application using something like `gunicorn` and `supvervisor` behind a `nginx` installation (proxy).
+It is recommended hosting the application using something like [gunicorn](https://gunicorn.org/) and [supervisor](http://supervisord.org/) behind Nginx.
 
-To retrieve the status of a Minecraft Server, send a `GET` request to the URI `/server/<address>`. Replace `<address>` with specified hostname or IP of Minecraft Server (see example result). This endpoint will always return a JSON blob.
+To retrieve the status of a Minecraft Server, send a `GET` request to the URI `/server/<address>`. Replace `<address>` with specified hostname or IP of Minecraft Server (see the example result below). This endpoint will always return a JSON blob.
 
 ```json
 {
@@ -45,7 +45,7 @@ To retrieve the status of a Minecraft Server, send a `GET` request to the URI `/
 }
 ```
 
-You can also send a `GET` request to `/favicon/<address>`, which will then return the server icon as PNG for specified server.
+You can also send a `GET` request to `/favicon/<address>`, which will then return the server icon as PNG for the specified server.
 
 ## Contributing
 
