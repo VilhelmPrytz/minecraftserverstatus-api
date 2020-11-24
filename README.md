@@ -16,6 +16,14 @@ pip3 install -r requirements.txt
 
 It is recommended hosting the application using something like [gunicorn](https://gunicorn.org/) and [supervisor](http://supervisord.org/) behind Nginx.
 
+You can also run the application using the Docker image.
+
+```bash
+docker run --name minecraftserverstatus-api -d -p 5000:5000 prytz/minecraftserverstatus-api:latest
+```
+
+This will run the application on port 5000. The image is using Python 3.9 and gunicorn.
+
 To retrieve the status of a Minecraft Server, send a `GET` request to the URI `/server/<address>`. Replace `<address>` with specified hostname or IP of Minecraft Server (see the example result below). This endpoint will always return a JSON blob.
 
 ```json
